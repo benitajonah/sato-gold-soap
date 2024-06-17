@@ -1,0 +1,83 @@
+/*---------------- FONT FAMILYS ------------------*/
+$body-font: Montserrat Alternates, sans-serif;
+
+/* ==================== LIGHT/DARK THEME ====================== */
+
+:root {
+  --white-color: rgb(244, 242, 235);
+  --black-color: rgb(17, 15, 4);
+}
+
+.dark-theme {
+  --black-color: rgb(244, 242, 235);
+  --white-color: rgb(17, 15, 4);
+}
+
+/*---------------- HEADER HEIGHT ------------------*/
+$header-height: 4rem;
+
+/*---------------- COLORS ------------------*/
+$white-color: hsl(0, 0%, 100%);
+$black-color: hsl(0, 0%, 0%);
+$base-color: hsl(0, 18%, 92%);
+$primary-color: hsl(0, 0%, 15%);
+$secondary-color: hsl(51, 64%, 57%);
+
+/* --------- Z INDEX ------------- */
+$z-tooltip: 10;
+$z-fixed: 100;
+
+/*----------------FONT SIZES------------------*/
+/*1rem = 16px*/
+$h1-font-size: 1.5rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.832rem;
+
+/*----------------FONT WEIGHTS------------------*/
+$font-weights: (
+  'regular': 300,
+  'medium': 500,
+  'bold': 800,
+);
+
+/*---------------- FONT WEIGHT OPTION -"font-weight: weight(weight name);"------------------*/
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+/*---------------- MOBILE ------------------*/
+$mobile: 900px;
+$mobile-small: 470px;
+
+//
+//
+//
+
+/*FUNCTIONS*/
+/*---------------- FLEX CENTER DISPLAY - "@include flexCenter(direction, background); ------------------*/
+@mixin flexCenter($direction, $background) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  background: $background;
+}
+
+/*---------------- @MEDIA - "@include mobile{content}------------------*/
+@mixin mobileMax {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobileMin {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobileSmall {
+  @media screen and (max-width: $mobile-small) {
+    @content;
+  }
+}

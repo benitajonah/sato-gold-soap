@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 2,
+    "name": "Benita Jonah",
+    "email": "sugoi@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 3,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 4,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 5,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 6,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 7,
+    "name": "Benita Jonah",
+    "email": "bjonah72@gmail.com",
+    "age": 26,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "dark",
+      "height": 10
+    }
+  },
+
+  {
+    "id": 8,
+    "name": "Kawaii Chan",
+    "email": "kawaiichan@icloud.com",
+    "age": 13,
+    "image": "./media/sun2.png",
+    "features": {
+      "complexion": "caramel",
+      "height": 5
+    }
+  }
+]
