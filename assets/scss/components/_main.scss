@@ -1,3 +1,8 @@
+main {
+  padding: 5.5rem 0;
+  color: var(--dark-color);
+}
+
 .user {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -33,27 +38,11 @@
   display: none;
 }
 
-.background__container {
-  width: 100%;
-  height: 50vh;
-  background-image: url('/assets/media/soap-header.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.color__overlay {
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.4;
-  position: absolute;
-}
-
 @include mobileMax {
+  main {
+    padding: 4rem 0;
+  }
+
   .user {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }

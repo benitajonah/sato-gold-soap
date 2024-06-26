@@ -1,18 +1,27 @@
 /*---------------- FONT FAMILYS ------------------*/
 /* ==================== LIGHT/DARK THEME ====================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 :root {
-  --white-color: rgb(244, 242, 235);
-  --black-color: rgb(17, 15, 4);
+  /*---------------- COLORS ------------------*/
+  --light-color: rgb(244, 242, 235);
+  --dark-color: rgb(17, 15, 4);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --base-color: hsl(0, 18%, 92%);
+  --primary-color: hsl(0, 0%, 15%);
+  --accent-color: hsl(51, 99%, 44%);
+  --secondary-color: hsl(51, 98%, 47%);
+  --button-color: hsl(0, 0%, 0%);
+  --overlay-color: hsl(0, 0%, 0%);
 }
 
 .dark-theme {
-  --black-color: rgb(244, 242, 235);
-  --white-color: rgb(17, 15, 4);
+  --dark-color: rgb(244, 242, 235);
+  --light-color: rgb(17, 15, 4);
+  --overlay-color: rgb(17, 15, 4);
 }
 
 /*---------------- HEADER HEIGHT ------------------*/
-/*---------------- COLORS ------------------*/
 /* --------- Z INDEX ------------- */
 /*----------------FONT SIZES------------------*/
 /*1rem = 16px*/
@@ -52,7 +61,8 @@ body {
   max-width: 1550px;
   display: flex;
   flex-direction: column;
-  font-family: Montserrat Alternates, sans-serif;
+  font-family: "Marcellus", serif;
+  background: var(--light-color);
 }
 
 ul {
@@ -64,7 +74,7 @@ a {
 }
 
 a.active {
-  color: hsl(51, 64%, 57%);
+  color: var(--secondary-color);
 }
 
 /* ==================== PRELOADER ====================== */
@@ -82,7 +92,6 @@ a.active {
   justify-content: center;
 }
 .preloader__ring {
-  background: pink;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -138,13 +147,11 @@ a.active {
   }
 }
 .header {
-  background: var(--white-color);
   width: inherit;
   max-width: inherit;
   position: fixed;
   align-items: center;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -153,16 +160,22 @@ a.active {
   justify-content: space-between;
   align-items: center;
   height: 5.5rem;
-  padding: 0 2%;
-  color: var(--black-color);
-  font-weight: 500;
+  padding: 0 7%;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.navbar.active {
+  background: var(--light-color);
 }
 
 .logo {
   margin-left: 10px;
+  font-size: xx-large;
+  font-family: "Marcellus", serif;
 }
 .logo img {
-  width: 150px;
+  width: 120px;
 }
 
 .navbar__links {
@@ -189,16 +202,16 @@ a.active {
 }
 
 .navbar__link {
-  color: var(--black-color);
+  color: var(--dark-color);
 }
 
 .navbar__link:hover {
-  color: hsl(51, 64%, 57%);
+  color: var(--secondary-color);
 }
 
 .navbar__link.active {
-  color: hsl(51, 64%, 57%);
-  border-bottom: 2px solid hsl(51, 64%, 57%);
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .navbar__link span {
@@ -213,7 +226,7 @@ a.active {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background: hsl(51, 64%, 57%);
+  background: var(--secondary-color);
   transition: width 0.2s ease-out;
 }
 
@@ -230,15 +243,16 @@ a.active {
 i {
   font-size: 1.4rem;
   cursor: pointer;
+  font-weight: 300;
 }
 
 i:hover {
   transform: translateY(-0.5px);
-  color: hsl(51, 64%, 57%);
+  color: var(--secondary-color);
 }
 
 i.active {
-  color: hsl(51, 64%, 57%);
+  color: var(--secondary-color);
 }
 
 .cart__icon {
@@ -262,24 +276,25 @@ i.active {
 .search__input {
   border: none;
   outline: none;
-  width: 96%;
+  width: 90%;
   height: 100%;
   border-radius: 4rem;
   padding-left: 14px;
+  font-family: "Marcellus", serif;
   font-size: 0.832rem;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0;
   pointer-events: none;
   transition: opacity 2s;
 }
 .search__input:-webkit-autofill {
-  box-shadow: 0 0 0 100px var(--white-color) inset;
+  box-shadow: 0 0 0 100px var(--light-color) inset;
 }
 .search__input::-moz-placeholder {
-  color: var(--black-color);
+  color: hsl(0, 0%, 50%);
 }
 .search__input::placeholder {
-  color: var(--black-color);
+  color: hsl(0, 0%, 50%);
 }
 .search__button {
   width: 1.5rem;
@@ -295,9 +310,10 @@ i.active {
   transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
 }
 .search__icon, .search__close {
-  color: var(--black-color);
+  color: var(--dark-color);
   font-size: 1.4rem;
   position: absolute;
+  transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
 }
 .search__close {
   opacity: 0;
@@ -313,7 +329,7 @@ i.active {
 }
 
 .show-search.search {
-  background: var(--white-color);
+  background: var(--light-color);
   box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.2);
   border-radius: 4rem;
   padding: 4px;
@@ -322,7 +338,7 @@ i.active {
 .show-search .search__icon,
 .show-search .search__close {
   font-size: 1rem;
-  color: var(--white-color);
+  color: var(--light-color);
 }
 
 .show-search .search__input {
@@ -333,7 +349,7 @@ i.active {
 .show-search .search__button {
   right: 5px;
   border-radius: 50%;
-  background-color: var(--black-color);
+  background-color: var(--dark-color);
   transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
   transform: rotate(90deg);
 }
@@ -361,21 +377,21 @@ i.active {
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
-  background-color: var(--black-color);
+  background-color: var(--dark-color);
 }
 
 /* ================ TOGGLE BUTTON(Day/Night) ================= */
 .containerDay {
-  width: 30px;
+  width: 27px;
   height: 20px;
-  background-image: linear-gradient(to right, var(--black-color), var(--black-color));
+  background-image: linear-gradient(to right, var(--dark-color), var(--dark-color));
   border-radius: 30px;
   position: relative;
   cursor: pointer;
 }
 
 .containerNight {
-  background-image: linear-gradient(to right, var(--black-color), var(--black-color));
+  background-image: linear-gradient(to right, var(--dark-color), var(--dark-color));
 }
 
 .animation {
@@ -385,7 +401,7 @@ i.active {
 .dayMode {
   width: 15px;
   height: 15px;
-  background-image: url(/assets/media/moon-white.png);
+  background-image: url(/assets/img/moon-white.png);
   background-repeat: no-repeat;
   background-size: 15px;
   position: absolute;
@@ -394,7 +410,7 @@ i.active {
 }
 
 .nightMode {
-  background-image: url(/assets/media/sun2.png);
+  background-image: url(/assets/img/sun2.png);
   background-size: 15.5px;
   position: absolute;
   animation: mode 0.6s forwards;
@@ -408,7 +424,7 @@ i.active {
   }
   100% {
     position: absolute;
-    left: 13px;
+    left: 10px;
     top: 2px;
   }
 }
@@ -431,7 +447,7 @@ i.active {
     height: 4rem;
   }
   .logo img {
-    width: 120px;
+    width: 105px;
     margin-top: 5px;
   }
   .navbar__menu {
@@ -441,15 +457,15 @@ i.active {
     top: 0;
     left: -100%;
     gap: 40px;
-    background: var(--white-color);
-    color: var(--black-color);
+    background: var(--light-color);
+    color: var(--dark-color);
     width: 100%;
     height: 100%;
     padding: 6rem 2rem 4.5rem;
-    transition: left 0.2s;
+    transition: left 0.4s;
     justify-content: space-between;
   }
-  .show-menu {
+  .navbar__menu.show-menu {
     left: 0;
   }
   .navbar__links,
@@ -465,13 +481,13 @@ i.active {
          column-gap: 1rem;
   }
   .navbar__social-link {
-    color: var(--black-color);
+    color: var(--dark-color);
     font-size: 1.5rem;
     transition: transform 0.4s;
   }
   .navbar__social-link:hover {
     transform: translateY(-0.25rem);
-    color: hsl(51, 64%, 57%);
+    color: var(--secondary-color);
   }
   .show-menu .navbar__item {
     visibility: visible;
@@ -519,6 +535,11 @@ i.active {
     transform: translateX(0);
   }
 }
+main {
+  padding: 5.5rem 0;
+  color: var(--dark-color);
+}
+
 .user {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -553,27 +574,10 @@ i.active {
   display: none;
 }
 
-.background__container {
-  width: 100%;
-  height: 50vh;
-  background-image: url("/assets/media/soap-header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.color__overlay {
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.4;
-  position: absolute;
-}
-
 @media screen and (max-width: 900px) {
+  main {
+    padding: 4rem 0;
+  }
   .user {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
@@ -582,4 +586,83 @@ i.active {
   .user {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
+}
+.home {
+  width: 100%;
+  height: 60vh;
+}
+.home__container {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  padding: 30px;
+  background: url(/assets/img/soap-header4b.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white-color);
+}
+.home__overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  opacity: 0.7;
+  position: absolute;
+}
+.home__texts {
+  position: absolute;
+  padding: 0 100px;
+  flex-basis: 50%;
+}
+.home__texts h1 {
+  font-size: 3.5rem;
+}
+.home__texts p {
+  margin-bottom: 20px;
+  width: 60%;
+  font-size: large;
+}
+.home__texts span {
+  color: var(--secondary-color);
+}
+.home__texts button {
+  border: none;
+  background: var(--secondary-color);
+  color: var(--black-color);
+  padding: 15px 20px;
+  font-weight: 800;
+  font-family: "Marcellus", serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.home__texts button:hover {
+  background: var(--accent-color);
+}
+
+@media screen and (max-width: 900px) {
+  .home {
+    height: 50vh;
+  }
+  .home__container {
+    flex-direction: column;
+    background: url(/assets/img/soap-header.jpg);
+    background-size: cover;
+  }
+  .home__texts {
+    padding: 0 30px;
+  }
+  .home__texts h1 {
+    font-size: 3rem;
+  }
+  .home__texts p {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+.perfume {
+  padding: 50px 0;
 }/*# sourceMappingURL=main.css.map */

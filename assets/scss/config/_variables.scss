@@ -1,27 +1,30 @@
 /*---------------- FONT FAMILYS ------------------*/
-$body-font: Montserrat Alternates, sans-serif;
+$font: 'Marcellus', serif;
 
 /* ==================== LIGHT/DARK THEME ====================== */
 
 :root {
-  --white-color: rgb(244, 242, 235);
-  --black-color: rgb(17, 15, 4);
+  /*---------------- COLORS ------------------*/
+  --light-color: rgb(244, 242, 235);
+  --dark-color: rgb(17, 15, 4);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --base-color: hsl(0, 18%, 92%);
+  --primary-color: hsl(0, 0%, 15%);
+  --accent-color: hsl(51, 99%, 44%);
+  --secondary-color: hsl(51, 98%, 47%);
+  --button-color: hsl(0, 0%, 0%);
+  --overlay-color: hsl(0, 0%, 0%);
 }
 
 .dark-theme {
-  --black-color: rgb(244, 242, 235);
-  --white-color: rgb(17, 15, 4);
+  --dark-color: rgb(244, 242, 235);
+  --light-color: rgb(17, 15, 4);
+  --overlay-color: rgb(17, 15, 4);
 }
 
 /*---------------- HEADER HEIGHT ------------------*/
 $header-height: 4rem;
-
-/*---------------- COLORS ------------------*/
-$white-color: hsl(0, 0%, 100%);
-$black-color: hsl(0, 0%, 0%);
-$base-color: hsl(0, 18%, 92%);
-$primary-color: hsl(0, 0%, 15%);
-$secondary-color: hsl(51, 64%, 57%);
 
 /* --------- Z INDEX ------------- */
 $z-tooltip: 10;
@@ -36,7 +39,7 @@ $small-font-size: 0.832rem;
 /*----------------FONT WEIGHTS------------------*/
 $font-weights: (
   'regular': 300,
-  'medium': 500,
+  'medium': 600,
   'bold': 800,
 );
 

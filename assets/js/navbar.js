@@ -24,6 +24,21 @@ activeLink.forEach((link) => {
   })
 })
 
+/* ===================== NAVBAR ON SCROLL ==================*/
+const navbarEl = document.querySelector('#navbar')
+const mainEl = document.querySelector('#main')
+
+console.log(navbarEl.offsetHeight)
+console.log(mainEl.offsetTop)
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > mainEl.offsetTop - navbarEl.offsetHeight - 50) {
+    navbarEl.classList.add('active')
+  } else {
+    navbarEl.classList.remove('active')
+  }
+})
+
 /* =============== LIGHT/DARK THEME ================ */
 const icon = document.querySelector('#containerChange')
 
@@ -36,10 +51,10 @@ icon.addEventListener('click', () => {
   /*  --------Logo Change-------- */
   let logoDisplay = document.querySelector('#logo-img')
 
-  if (logoDisplay.src.match('assets/media/logo-black.png')) {
-    logoDisplay.src = 'assets/media/logo-white.png'
+  if (logoDisplay.src.match('assets/img/logo-black.png')) {
+    logoDisplay.src = 'assets/img/logo-white.png'
   } else {
-    logoDisplay.src = 'assets/media/logo-black.png'
+    logoDisplay.src = 'assets/img/logo-black.png'
   }
 })
 

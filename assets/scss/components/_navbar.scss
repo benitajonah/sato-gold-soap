@@ -1,11 +1,9 @@
 .header {
-  background: var(--white-color);
   width: inherit;
   max-width: inherit;
   position: fixed;
   align-items: center;
   z-index: $z-fixed;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -14,16 +12,21 @@
   justify-content: space-between;
   align-items: center;
   height: calc(($header-height) + 1.5rem);
-  padding: 0 2%;
-  color: var(--black-color);
+  padding: 0 7%;
+  color: var(--dark-color);
   font-weight: weight(medium);
 }
 
+.navbar.active {
+  background: var(--light-color);
+}
 .logo {
   margin-left: 10px;
+  font-size: xx-large;
+  font-family: $font;
 
   & img {
-    width: 150px;
+    width: 120px;
   }
 }
 
@@ -51,16 +54,16 @@
 }
 
 .navbar__link {
-  color: var(--black-color);
+  color: var(--dark-color);
 }
 
 .navbar__link:hover {
-  color: $secondary-color;
+  color: var(--secondary-color);
 }
 
 .navbar__link.active {
-  color: $secondary-color;
-  border-bottom: 2px solid $secondary-color;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .navbar__link span {
@@ -75,7 +78,7 @@
   bottom: -6px;
   width: 0;
   height: 2px;
-  background: $secondary-color;
+  background: var(--secondary-color);
   transition: width 0.2s ease-out;
 }
 
@@ -92,15 +95,16 @@
 i {
   font-size: 1.4rem;
   cursor: pointer;
+  font-weight: weight(regular);
 }
 
 i:hover {
   transform: translateY(-0.5px);
-  color: $secondary-color;
+  color: var(--secondary-color);
 }
 
 i.active {
-  color: $secondary-color;
+  color: var(--secondary-color);
 }
 
 .cart__icon {
@@ -124,10 +128,11 @@ i.active {
   &__input {
     border: none;
     outline: none;
-    width: 96%;
+    width: 90%;
     height: 100%;
     border-radius: 4rem;
     padding-left: 14px;
+    font-family: $font;
     font-size: $small-font-size;
     font-weight: weight(medium);
     opacity: 0;
@@ -135,11 +140,11 @@ i.active {
     transition: opacity 2s;
 
     &:-webkit-autofill {
-      box-shadow: 0 0 0 100px var(--white-color) inset;
+      box-shadow: 0 0 0 100px var(--light-color) inset;
     }
 
     &::placeholder {
-      color: var(--black-color);
+      color: hsl(0, 0%, 50%);
     }
   }
 
@@ -159,10 +164,10 @@ i.active {
 
   &__icon,
   &__close {
-    color: var(--black-color);
+    color: var(--dark-color);
     font-size: 1.4rem;
     position: absolute;
-    //transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
+    transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
   }
 
   &__close {
@@ -180,7 +185,7 @@ i.active {
 }
 
 .show-search.search {
-  background: var(--white-color);
+  background: var(--light-color);
   box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.2);
   border-radius: 4rem;
   padding: 4px;
@@ -189,7 +194,7 @@ i.active {
 .show-search .search__icon,
 .show-search .search__close {
   font-size: 1rem;
-  color: var(--white-color);
+  color: var(--light-color);
 }
 
 .show-search .search__input {
@@ -200,7 +205,7 @@ i.active {
 .show-search .search__button {
   right: 5px;
   border-radius: 50%;
-  background-color: var(--black-color);
+  background-color: var(--dark-color);
   transition: transform 0.6s cubic-bezier(0.9, 0, 0.3, 0.9);
   transform: rotate(90deg);
 }
@@ -229,17 +234,17 @@ i.active {
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
-  background-color: var(--black-color);
+  background-color: var(--dark-color);
 }
 
 /* ================ TOGGLE BUTTON(Day/Night) ================= */
 .containerDay {
-  width: 30px;
+  width: 27px;
   height: 20px;
   background-image: linear-gradient(
     to right,
-    var(--black-color),
-    var(--black-color)
+    var(--dark-color),
+    var(--dark-color)
   );
   border-radius: 30px;
   position: relative;
@@ -248,8 +253,8 @@ i.active {
 .containerNight {
   background-image: linear-gradient(
     to right,
-    var(--black-color),
-    var(--black-color)
+    var(--dark-color),
+    var(--dark-color)
   );
 }
 .animation {
@@ -258,7 +263,7 @@ i.active {
 .dayMode {
   width: 15px;
   height: 15px;
-  background-image: url(/assets/media/moon-white.png);
+  background-image: url(/assets/img/moon-white.png);
   background-repeat: no-repeat;
   background-size: 15px;
   position: absolute;
@@ -266,7 +271,7 @@ i.active {
   left: 4px;
 }
 .nightMode {
-  background-image: url(/assets/media/sun2.png);
+  background-image: url(/assets/img/sun2.png);
   background-size: 15.5px;
   position: absolute;
   animation: mode 0.6s forwards;
@@ -279,7 +284,7 @@ i.active {
   }
   100% {
     position: absolute;
-    left: 13px;
+    left: 10px;
     top: 2px;
   }
 }
@@ -304,7 +309,7 @@ i.active {
   }
 
   .logo img {
-    width: 120px;
+    width: 105px;
     margin-top: 5px;
   }
 
@@ -315,16 +320,16 @@ i.active {
     top: 0;
     left: -100%;
     gap: 40px;
-    background: var(--white-color);
-    color: var(--black-color);
+    background: var(--light-color);
+    color: var(--dark-color);
     width: 100%;
     height: 100%;
     padding: 6rem 2rem 4.5rem;
-    transition: left 0.2s;
+    transition: left 0.4s;
     justify-content: space-between;
   }
 
-  .show-menu {
+  .navbar__menu.show-menu {
     left: 0;
   }
 
@@ -342,13 +347,13 @@ i.active {
     column-gap: 1rem;
 
     &-link {
-      color: var(--black-color);
+      color: var(--dark-color);
       font-size: 1.5rem;
       transition: transform 0.4s;
 
       &:hover {
         transform: translateY(-0.25rem);
-        color: $secondary-color;
+        color: var(--secondary-color);
       }
     }
   }
