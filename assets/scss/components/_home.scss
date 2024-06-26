@@ -11,7 +11,7 @@
     justify-content: center;
     transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
     padding: 30px;
-    background: url(/assets/img/soap-header4b.jpg);
+    background: url(/assets/img/soap-header.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,6 +52,7 @@
       padding: 15px 20px;
       font-weight: weight(bold);
       font-family: $font;
+      font-size: large;
       border-radius: 5px;
       cursor: pointer;
 

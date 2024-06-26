@@ -5,8 +5,8 @@ $font: 'Marcellus', serif;
 
 :root {
   /*---------------- COLORS ------------------*/
-  --light-color: rgb(244, 242, 235);
-  --dark-color: rgb(17, 15, 4);
+  --light-color: rgb(255, 253, 246);
+  --dark-color: rgb(36, 33, 16);
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
   --base-color: hsl(0, 18%, 92%);
@@ -18,9 +18,8 @@ $font: 'Marcellus', serif;
 }
 
 .dark-theme {
-  --dark-color: rgb(244, 242, 235);
-  --light-color: rgb(17, 15, 4);
-  --overlay-color: rgb(17, 15, 4);
+  --dark-color: rgb(255, 253, 246);
+  --light-color: rgb(36, 33, 16);
 }
 
 /*---------------- HEADER HEIGHT ------------------*/
