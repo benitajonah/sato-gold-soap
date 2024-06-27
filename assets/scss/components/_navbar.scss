@@ -7,6 +7,7 @@
 }
 
 .navbar {
+  background: var(--light-color);
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -14,20 +15,13 @@
   height: calc(($header-height) + 1.5rem);
   padding: 0 7%;
   color: var(--dark-color);
-  font-weight: weight(medium);
+  font-weight: weight(bold);
 }
 
-.navbar.active {
-  background: var(--light-color);
-}
 .logo {
-  margin-left: 10px;
-  font-size: xx-large;
+  margin-left: 5px;
+  font-size: 1.6rem;
   font-family: $font;
-
-  & img {
-    width: 120px;
-  }
 }
 
 .navbar__links {
@@ -218,21 +212,27 @@ i.active {
   opacity: 1;
 }
 
+.show-search.navbar {
+  width: 100%;
+  justify-content: space-between;
+}
+
 .show-search.navbar__middle {
   display: none;
 }
 
 .show-search.navbar__left {
-  display: none;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* ================ TOGGLE BUTTON(Show Menu) ================= */
 
 .bar {
   display: block;
-  width: 20px;
+  width: 18px;
   height: 3px;
-  margin: 5px auto;
+  margin: 4.5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   background-color: var(--dark-color);
 }
@@ -300,17 +300,12 @@ i.active {
   }
 }
 
-/*===================== MOBILE NAVIGATION =============================*/
+/*===================== MOBILE =============================*/
 @include mobileMax {
   .navbar {
     padding: 0 2%;
     width: 100%;
     height: $header-height;
-  }
-
-  .logo img {
-    width: 105px;
-    margin-top: 5px;
   }
 
   .navbar__menu {
@@ -413,5 +408,18 @@ i.active {
   .show-menu .navbar__item {
     visibility: visible;
     transform: translateX(0);
+  }
+
+  /*   Search Bar  */
+  .show-search {
+    width: 90%;
+  }
+
+  .show-search.navbar {
+    justify-content: flex-end;
+  }
+
+  .show-search.navbar__left {
+    display: none;
   }
 }

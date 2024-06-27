@@ -26,28 +26,21 @@
   &__texts {
     flex-basis: 50%;
     font-size: xx-large;
-
-    button {
-      border: none;
-      background: var(--secondary-color);
-      color: var(--black-color);
-      padding: 15px 20px;
-      font-weight: weight(bold);
-      font-family: $font;
-      font-size: large;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-
-      &:hover {
-        background: var(--accent-color);
-      }
-    }
+    margin-left: 20px;
   }
 }
 
+/*===================== MOBILE =============================*/
 @include mobileMax {
   .perfume__container {
     flex-direction: column;
+  }
+
+  .perfume__image {
+    width: 80%;
+  }
+
+  .perfume__texts {
+    font-size: x-large;
   }
 }

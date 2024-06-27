@@ -9,10 +9,7 @@ let items = []
 searchInput.addEventListener('input', (e) => {
   const value = e.target.value.toLowerCase()
   items.forEach((item) => {
-    const isVisible =
-      item.name.toLowerCase().includes(value) ||
-      item.complexion.toLowerCase().includes(value) ||
-      item.email.toLowerCase().includes(value)
+    const isVisible = item.name.toLowerCase().includes(value)
 
     item.element.classList.toggle('hide', !isVisible)
   })
@@ -25,25 +22,22 @@ fetch('assets/json/items.json')
   .then((data) => {
     items = data.map((item) => {
       const card = itemTemplate.content.cloneNode(true).children[0]
-      const header = card.querySelector('[item-header]')
-      const body = card.querySelector('[item-body]')
-      const age = card.querySelector('[item-age]')
-      const complexion = card.querySelector('[complexion]')
-      const height = card.querySelector('[height]')
+      const image = card.querySelector('[item-image]')
+      const button = card.querySelector('[item-button]')
+      const name = card.querySelector('[item-name]')
+      const price = card.querySelector('[item-price]')
 
-      header.textContent = item.name
-      body.textContent = item.email
-      age.textContent = item.age
-      complexion.textContent = item.features.complexion
-      height.textContent = item.features.height
-
+      image.src = item.image
+      button.textContent = item.button
+      name.textContent = item.name
+      price.textContent += `₦${item.price}`
       itemCardContainer.append(card)
 
       return {
+        image: item.image,
         name: item.name,
-        email: item.email,
-        age: item.age,
-        complexion: item.features.complexion,
+        button: item.button,
+        price: item.price,
         element: card,
       }
     })

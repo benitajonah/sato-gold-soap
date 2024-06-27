@@ -11,11 +11,11 @@
     justify-content: center;
     transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
     padding: 30px;
-    background: url(/assets/img/soap-header.jpg);
+    background: url(/assets/img/header-two.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--white-color);
+    color: $white-color;
   }
 
   &__overlay {
@@ -48,7 +48,7 @@
     button {
       border: none;
       background: var(--secondary-color);
-      color: var(--black-color);
+      color: $black-color;
       padding: 15px 20px;
       font-weight: weight(bold);
       font-family: $font;
@@ -63,26 +63,32 @@
   }
 }
 
+/*===================== MOBILE =============================*/
 @include mobileMax {
   .home {
     height: 50vh;
 
     &__container {
       flex-direction: column;
-      background: url(/assets/img/soap-header.jpg);
+      background: url(/assets/img/header-two.png);
       background-size: cover;
+      background-position: center;
     }
 
     &__texts {
       padding: 0 30px;
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
       p {
         width: 80%;
         font-size: $normal-font-size;
+      }
+
+      button {
+        font-size: small;
       }
     }
   }

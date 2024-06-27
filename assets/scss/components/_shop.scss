@@ -1,0 +1,71 @@
+.shop {
+  background: var(--light-color);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  //row-gap: 10px;
+  //column-gap: 10px;
+  margin: 1rem 0 1rem 0;
+  padding: 20px 10px;
+  width: 100%;
+  justify-content: center;
+  background: var(--light-color);
+}
+
+.card {
+  height: 50vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  border-left: 1px solid var(--dark-color);
+  border-top: 1px solid var(--dark-color);
+
+  color: var(--dark-color);
+
+  &__image {
+    width: 100%;
+    height: 75%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 100%;
+      padding: 5px 0;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@include mobileMax {
+  .user {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .card {
+    height: 30vh;
+  }
+}
+
+@include mobileSmall {
+  .user {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

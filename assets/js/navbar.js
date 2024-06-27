@@ -25,19 +25,16 @@ activeLink.forEach((link) => {
 })
 
 /* ===================== NAVBAR ON SCROLL ==================*/
-const navbarEl = document.querySelector('#navbar')
-const mainEl = document.querySelector('#main')
+// const navbarEl = document.querySelector('#navbar')
+// const mainEl = document.querySelector('#main')
 
-console.log(navbarEl.offsetHeight)
-console.log(mainEl.offsetTop)
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > mainEl.offsetTop - navbarEl.offsetHeight - 50) {
-    navbarEl.classList.add('active')
-  } else {
-    navbarEl.classList.remove('active')
-  }
-})
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY > mainEl.offsetTop - navbarEl.offsetHeight - 50) {
+//     navbarEl.classList.add('active')
+//   } else {
+//     navbarEl.classList.remove('active')
+//   }
+// })
 
 /* =============== LIGHT/DARK THEME ================ */
 const icon = document.querySelector('#containerChange')
@@ -47,15 +44,6 @@ icon.addEventListener('click', () => {
   document.getElementById('changeMode').classList.toggle('nightMode')
   document.getElementById('containerChange').classList.toggle('containerNight')
   document.body.classList.toggle('dark-theme')
-
-  /*  --------Logo Change-------- */
-  let logoDisplay = document.querySelector('#logo-img')
-
-  if (logoDisplay.src.match('assets/img/logo-black.png')) {
-    logoDisplay.src = 'assets/img/logo-white.png'
-  } else {
-    logoDisplay.src = 'assets/img/logo-black.png'
-  }
 })
 
 /* =============== SEARCH BAR ================ */
@@ -65,6 +53,7 @@ const searchButton = document.querySelector('#search-button')
 const navbarLeft = document.querySelector('#navbar-left')
 const navbarRight = document.querySelector('#navbar-right')
 const navbarMiddle = document.querySelector('#navbar-middle')
+const navbar = document.querySelector('#navbar')
 
 searchButton.addEventListener('click', () => {
   searchBar.classList.toggle('show-search')
@@ -72,4 +61,5 @@ searchButton.addEventListener('click', () => {
   navbarLeft.classList.toggle('show-search')
   navbarRight.classList.toggle('show-search')
   navbarMiddle.classList.toggle('show-search')
+  navbar.classList.toggle('show-search')
 })
