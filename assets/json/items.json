@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Benita Jonah",
+    "name": "Perfume One",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-1.jpg"
@@ -9,7 +9,7 @@
 
   {
     "id": 2,
-    "name": "Benita Jonah",
+    "name": "Perfume Two",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-2.jpg"
@@ -17,7 +17,7 @@
 
   {
     "id": 3,
-    "name": "Benita Jonah",
+    "name": "Perfume Three",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-1.jpg"
@@ -25,7 +25,7 @@
 
   {
     "id": 4,
-    "name": "Benita Jonah",
+    "name": "Perfume Four",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-2.jpg"
@@ -33,7 +33,7 @@
 
   {
     "id": 5,
-    "name": "Benita Jonah",
+    "name": "Perfume Five",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-1.jpg"
@@ -41,7 +41,7 @@
 
   {
     "id": 6,
-    "name": "Benita Jonah",
+    "name": "Perfume Six",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-2.jpg"
@@ -49,7 +49,7 @@
 
   {
     "id": 7,
-    "name": "Benita Jonah",
+    "name": "Perfume Seven",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-1.jpg"
@@ -57,7 +57,7 @@
 
   {
     "id": 8,
-    "name": "Benita Jonah",
+    "name": "Perfume Eight",
     "price": 25000,
     "button": "Add to cart",
     "image": "assets/img/perfume-2.jpg"

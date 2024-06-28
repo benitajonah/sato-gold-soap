@@ -29,8 +29,8 @@
       <header class="header" id="header">
         <nav class="navbar" id="navbar">
           <!--================== Navbar Left Position  =====================-->
-          <!----------------- Show Menu ----------------------->
           <div class="navbar__left" id="navbar-left">
+            <!----------------- Show Menu ----------------------->
             <div class="navbar__toggle" id="navbar-toggle">
               <span class="bar"></span>
               <span class="bar"></span>
@@ -51,16 +51,25 @@
             <div class="navbar__menu" id="navbar-menu">
               <ul class="navbar__links" id="navbar-links">
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link link"><span>Home</span></a>
+                  <a href="#home" class="navbar__link link"
+                    ><span>Home</span></a
+                  >
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link link"><span>Perfume</span></a>
+                  <a href="#perfume" class="navbar__link link"
+                    ><span>Perfume</span></a
+                  >
                 </li>
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link link"><span>About</span></a>
+                  <a href="#shop" class="navbar__link link"
+                    ><span>Shop</span></a
+                  >
                 </li>
+
                 <li class="navbar__item">
-                  <a href="#" class="navbar__link link"><span>Contact</span></a>
+                  <a href="#contact" class="navbar__link link"
+                    ><span>Contact</span></a
+                  >
                 </li>
               </ul>
 
@@ -127,7 +136,7 @@
       <main class="main" id="main">
         <!-----======= Sections =========------>
         <!--==================== Home ====================-->
-        <section class="home">
+        <section class="home" id="home">
           <div class="home__container">
             <div class="home__overlay"></div>
             <div class="home__texts">
@@ -145,7 +154,7 @@
         </section>
 
         <!--==================== Perfume ====================-->
-        <section class="perfume">
+        <section class="perfume" id="perfume">
           <div class="perfume__container">
             <div class="perfume__image">
               <img src="/assets/img/perfume-header.png" alt="" />
@@ -155,11 +164,22 @@
               <h2>Embrace the essence of timeless beauty with every spray.</h2>
             </div>
           </div>
+
+          <div class="perfume__brands">
+            <img src="/assets/img/holyoud.png" alt="" />
+            <img
+              src="/assets/img/victoria-couture.png"
+              alt=""
+              id="victoria-couture" />
+            <img src="/assets/img/d-scents.png" alt="" id="d-scents" />
+          </div>
         </section>
 
         <!----- Product Section ------>
-        <section class="shop">
-          <h2>Shop our luxury perfume collection</h2>
+        <section class="shop" id="shop">
+          <div class="shop__texts">
+            <p>Shop our luxury perfume collection</p>
+          </div>
           <div class="user" data-item-cards-container></div>
           <template data-item-template>
             <div class="card">

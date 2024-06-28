@@ -14,8 +14,10 @@
   align-items: center;
   height: calc(($header-height) + 1.5rem);
   padding: 0 7%;
-  color: var(--dark-color);
-  font-weight: weight(bold);
+  color: var(--black-color);
+  font-family: $font-two;
+  font-weight: weight(regular);
+  font-size: $medium-font-size;
 }
 
 .logo {
@@ -63,6 +65,10 @@
 .navbar__link span {
   position: relative;
   transition: margin 0.4s;
+}
+
+.navbar__link span .active {
+  background: red;
 }
 
 .navbar__link span::after {
@@ -126,9 +132,9 @@ i.active {
     height: 100%;
     border-radius: 4rem;
     padding-left: 14px;
-    font-family: $font;
+    font-family: $font-one;
     font-size: $small-font-size;
-    font-weight: weight(medium);
+    font-weight: weight(regular);
     opacity: 0;
     pointer-events: none;
     transition: opacity 2s;

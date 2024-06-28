@@ -51,8 +51,9 @@
       color: $black-color;
       padding: 15px 20px;
       font-weight: weight(bold);
-      font-family: $font;
-      font-size: large;
+      font-family: $font-one;
+      font-weight: weight(regular);
+      font-size: $medium-font-size;
       border-radius: 5px;
       cursor: pointer;
 
@@ -88,7 +89,7 @@
       }
 
       button {
-        font-size: small;
+        font-size: $small-font-size;
       }
     }
   }

@@ -1,32 +1,47 @@
 .shop {
   background: var(--light-color);
   text-align: center;
-  padding: 4rem 0;
+  background: var(--transparent-color);
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+
+  &__texts {
+    padding: 2rem 1rem 0.2rem 1rem;
+    font-size: xx-large;
+    font-family: $font;
+    font-weight: weight(medium);
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 .user {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  //row-gap: 10px;
-  //column-gap: 10px;
-  margin: 1rem 0 1rem 0;
-  padding: 20px 10px;
   width: 100%;
+  row-gap: 5px;
+  column-gap: 10px;
   justify-content: center;
-  background: var(--light-color);
+  padding: 0 1%;
 }
 
 .card {
   height: 50vh;
   padding: 1rem;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: left;
-  border-left: 1px solid var(--dark-color);
-  border-top: 1px solid var(--dark-color);
-
+  align-items: center;
+  background: var(--light-color);
   color: var(--dark-color);
+  border: 2px var(--transparent-color);
 
   &__image {
     width: 100%;
@@ -38,34 +53,66 @@
     height: 100%;
   }
 
-  &__button {
+  &__description {
+    font-size: $normal-font-size;
+    font-family: $font-one;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__button {
+    width: 80%;
 
     button {
       width: 100%;
-      padding: 5px 0;
+      padding: 8px 0;
+      font-family: $font;
+      font-size: $normal-font-size;
+      cursor: pointer;
+      border: none;
+      background: var(--dark-secondary-color);
+      color: var(--light-color);
+      border-radius: 5px;
+
+      &:hover {
+        background: var(--accent-color);
+        color: var(--dark-secondary-color);
+      }
     }
   }
 }
 
-.hide {
-  display: none;
-}
-
 @include mobileMax {
   .user {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   }
 
   .card {
-    height: 30vh;
+    height: 40vh;
+
+    &__description {
+      width: 95%;
+    }
+
+    &__button {
+      width: 95%;
+    }
   }
 }
 
 @include mobileSmall {
   .user {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  .card__description {
+    font-size: $small-font-size;
+  }
+
+  .shop__texts {
+    font-size: x-large;
   }
 }

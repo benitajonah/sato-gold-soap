@@ -1,23 +1,24 @@
 /*---------------- FONT FAMILYS ------------------*/
 $font: 'Marcellus', serif;
-$font-one: 'Great Vibes', cursive;
-$font-two: 'Kaushan Script', cursive;
+$font-one: 'Poppins', sans-serif;
+$font-two: 'Ubuntu', sans-serif;
 
 /* ==================== LIGHT/DARK THEME ====================== */
 
 :root {
   /*---------------- COLORS ------------------*/
-  --light-color: rgb(255, 255, 255);
-  --dark-color: rgb(4, 4, 4);
+  --light-color: hsl(0, 0%, 100%);
+  --dark-color: hsl(0, 0%, 2%);
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
   --base-color: hsl(0, 18%, 92%);
   --primary-color: hsl(0, 0%, 15%);
-  --accent-color: hsl(51, 99%, 44%);
   --secondary-color: hsl(51, 98%, 47%);
-  --button-color: hsl(0, 0%, 0%);
+  --accent-color: hsl(51, 99%, 44%);
+  --dark-secondary-color: rgb(22, 19, 5);
+  --light-secondary-color: hsl(51, 47%, 91%);
   --overlay-color: hsl(0, 0%, 0%);
-  --transparent-color: rgba(0, 0, 0, 0.035);
+  --transparent-color: hsla(0, 0%, 0%, 0.067);
 }
 
 .dark-theme {
@@ -25,7 +26,9 @@ $font-two: 'Kaushan Script', cursive;
   --light-color: rgb(4, 4, 4);
   --black-color: hsl(0, 0%, 100%);
   --white-color: hsl(0, 0%, 0%);
-  --transparent-color: rgb(255, 255, 255);
+  --transparent-color: hsla(0, 0%, 100%, 0.057);
+  --dark-secondary-color: hsl(51, 47%, 91%);
+  --light-secondary-color: rgb(22, 19, 5);
 }
 
 /*---------------- COLORS ------------------*/
@@ -42,12 +45,15 @@ $z-fixed: 100;
 /*----------------FONT SIZES------------------*/
 /*1rem = 16px*/
 $h1-font-size: 1.5rem;
+$medium-font-size: 1.1rem;
 $normal-font-size: 1rem;
-$small-font-size: 0.832rem;
+$small-font-size: 0.852rem;
 
 /*----------------FONT WEIGHTS------------------*/
 $font-weights: (
-  'regular': 300,
+  'small-regular': 300,
+  'regular': 400,
+  'medium-regular': 500,
   'medium': 600,
   'bold': 800,
 );
@@ -59,7 +65,7 @@ $font-weights: (
 
 /*---------------- MOBILE ------------------*/
 $mobile: 900px;
-$mobile-small: 470px;
+$mobile-small: 500px;
 
 //
 //

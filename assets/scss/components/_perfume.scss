@@ -28,6 +28,27 @@
     font-size: xx-large;
     margin-left: 20px;
   }
+
+  &__brands {
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+
+    img {
+      width: 20%;
+      background: $white-color;
+    }
+
+    #victoria-couture {
+      margin: 0 20px;
+    }
+
+    #d-scents {
+      padding: 7px 0;
+    }
+  }
 }
 
 /*===================== MOBILE =============================*/
@@ -42,5 +63,24 @@
 
   .perfume__texts {
     font-size: x-large;
+  }
+
+  .perfume__brands {
+    img {
+      width: 30%;
+    }
+  }
+}
+
+@include mobileSmall {
+  .perfume__brands {
+    img {
+      width: 40%;
+      border: 2px solid black;
+    }
+
+    #d-scents {
+      padding: 5px 0;
+    }
   }
 }
